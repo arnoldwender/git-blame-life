@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <div className="text-center mb-8 border-b border-blame-primary/20 pb-6">
       <div className="text-[0.65rem] tracking-[6px] text-blame-primary/35 mb-2">
-        WENDER MEDIA ACCOUNTABILITY AVOIDANCE SUITE
+        ARNOLD WENDER ACCOUNTABILITY AVOIDANCE SUITE
       </div>
       <h1
         className="text-[clamp(1.4rem,5vw,2.5rem)] font-normal m-0 mb-1 tracking-[4px]"
