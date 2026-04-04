@@ -2,7 +2,7 @@
 
 **Git blame but for your life decisions. Find out who's really responsible.**
 
-Built by [Arnold Wender](https://github.com/arnoldwender)
+Built by [Arnold Wender](https://arnoldwender.com)
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Git%20Blame%20Life-3388ff?style=for-the-badge)](https://git-blame-life.netlify.app)
 
