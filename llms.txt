@@ -1,0 +1,26 @@
+# Git Blame Life
+
+> Git blame but for life decisions — find out who's really responsible.
+
+## Tech Stack
+- React 18, TypeScript, Vite, Tailwind CSS
+- Framer Motion, canvas-confetti, html2canvas, Web Audio API, Lucide React
+
+## Key Files
+- src/App.tsx — Main application component
+- src/components/ — UI components (roulette wheel, timeline, PR reviews, etc.)
+- src/data/ — Life decisions, blame targets, merge conflicts
+- src/hooks/ — Custom React hooks
+- src/utils/ — Utility functions
+
+## Features
+- Blame roulette wheel
+- Life timeline (git log style)
+- Merge conflicts between plans and reality
+- PR reviews for life decisions
+- Revert button (always fails)
+- Achievement system
+
+## URLs
+- Live: https://git-blame-life.netlify.app
+- Repo: https://github.com/arnoldwender/git-blame-life
