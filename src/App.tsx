@@ -299,7 +299,7 @@ export default function App() {
             AVOIDED THERAPY
           </div>
           <div>
-            BUILT BY WENDER MEDIA — WE BLAME OUR TOOLS, NOT OURSELVES
+            BUILT BY ARNOLD WENDER — WE BLAME OUR TOOLS, NOT OURSELVES
           </div>
           <div className="text-red-500/[0.13] mt-1">
             HTTP 418 — YOUR EX IS ALSO A TEAPOT
