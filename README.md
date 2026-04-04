@@ -65,6 +65,10 @@ npm run build
 
 **[https://git-blame-life.netlify.app](https://git-blame-life.netlify.app)**
 
+## Contributing
+
+Want to blame someone for this project's code? Check out [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get involved.
+
 ## License
 
-MIT
+This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
