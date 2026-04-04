@@ -1,0 +1,39 @@
+# Git Blame: Life Edition
+
+## What Is This?
+
+A humorous single-page web app that parodies `git blame` by blaming life problems on absurd culprits (your ex, Mercury retrograde, capitalism, etc.). Built with React, TypeScript, Vite, and Tailwind CSS. Fully client-side, no backend.
+
+## Tech Stack
+
+- React 18 + TypeScript (strict mode)
+- Vite 5 (build tool)
+- Tailwind CSS 3 (styling)
+- ESLint 9 + TypeScript ESLint (linting)
+
+## Architecture
+
+Single-page app with phase-based state (`idle` → `blaming` → `done`). All state lives in `App.tsx`. No routing, no external state management, no API calls.
+
+### Key Files
+
+- `src/App.tsx` — Main component, orchestrates animation phases
+- `src/data/blame.ts` — All blame data: culprits, blame lines, problems, terminal logs
+- `src/utils/glitch.ts` — Text glitch effect and severity color helpers
+- `src/components/` — Header, BlameInput, TerminalLog, BlameReport, BlameSummary, CRTOverlay
+- `tailwind.config.js` — Custom theme with blame colors and CRT animations
+
+## How to Run
+
+```
+npm install
+npm run dev
+```
+
+## How to Build
+
+```
+npm run build
+```
+
+Output goes to `dist/`. Deploy to any static hosting.
