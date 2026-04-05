@@ -16,6 +16,9 @@ import BlameRoulette from './components/BlameRoulette';
 import MergeConflict from './components/MergeConflict';
 import RevertButton from './components/RevertButton';
 import PRReview from './components/PRReview';
+import ContributionGraph from './components/ContributionGraph';
+import InsightsDashboard from './components/InsightsDashboard';
+import Changelog from './components/Changelog';
 import GlobalCounter from './components/GlobalCounter';
 import ShareCard from './components/ShareCard';
 import TabNav, { type TabId } from './components/TabNav';
@@ -260,6 +263,48 @@ export default function App() {
             transition={{ duration: 0.2 }}
           >
             <PRReview decision={lastDecision} />
+          </motion.div>
+        );
+
+      /* Contribution Graph — GitHub-style heatmap of life decisions */
+      case 'graph':
+        return (
+          <motion.div
+            key="graph"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <ContributionGraph />
+          </motion.div>
+        );
+
+      /* Repository Insights — stats, categories, contributors */
+      case 'insights':
+        return (
+          <motion.div
+            key="insights"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <InsightsDashboard />
+          </motion.div>
+        );
+
+      /* Changelog + Pro tier pricing */
+      case 'changelog':
+        return (
+          <motion.div
+            key="changelog"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Changelog />
           </motion.div>
         );
     }
