@@ -4,7 +4,7 @@
  */
 import { motion } from 'framer-motion';
 
-export type TabId = 'blame' | 'roulette' | 'conflict' | 'review';
+export type TabId = 'blame' | 'roulette' | 'conflict' | 'review' | 'graph' | 'insights' | 'changelog';
 
 interface Tab {
   id: TabId;
@@ -17,6 +17,9 @@ const TABS: Tab[] = [
   { id: 'roulette', label: 'ROULETTE', icon: '⟳' },
   { id: 'conflict', label: 'MERGE CONFLICT', icon: '⇋' },
   { id: 'review', label: 'PR REVIEW', icon: '✎' },
+  { id: 'graph', label: 'GRAPH', icon: '▦' },
+  { id: 'insights', label: 'INSIGHTS', icon: '◉' },
+  { id: 'changelog', label: 'CHANGELOG', icon: '⬡' },
 ];
 
 interface TabNavProps {
