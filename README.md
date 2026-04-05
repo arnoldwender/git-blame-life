@@ -29,6 +29,11 @@ Ever wondered who committed that terrible life decision? Git Blame Life applies 
 - **PR Reviews** — Your life decisions reviewed by brutally honest reviewers
 - **Revert Button** — Try to undo your worst decisions (spoiler: it never works)
 - **Achievements** — Unlock badges for blaming the right people
+- **GitHub Contribution Graph** — A full 52x7 heatmap showing your life's most blame-worthy weeks
+- **Repository Insights Dashboard** — Stats and analytics for your life repo's commit history
+- **Fake Changelog** — Version history of your life's most regrettable patches
+- **Pro Tier** — Premium blame features for the truly committed
+- **Expanded Tab Navigation** — Multi-panel interface for deep-diving into your life's git history
 
 ## Tech Stack
 

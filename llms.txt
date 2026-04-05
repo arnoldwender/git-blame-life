@@ -9,6 +9,11 @@
 ## Key Files
 - src/App.tsx — Main application component
 - src/components/ — UI components (roulette wheel, timeline, PR reviews, etc.)
+- src/components/ContributionGraph.tsx — GitHub-style 52x7 contribution heatmap
+- src/components/InsightsDashboard.tsx — Repository insights dashboard
+- src/components/Changelog.tsx — Fake changelog
+- src/components/CLIMode.tsx — CLI mode interface
+- src/components/TabNav.tsx — Tab navigation
 - src/data/ — Life decisions, blame targets, merge conflicts
 - src/hooks/ — Custom React hooks
 - src/utils/ — Utility functions
@@ -20,6 +25,11 @@
 - PR reviews for life decisions
 - Revert button (always fails)
 - Achievement system
+- GitHub Contribution Graph (52x7 heatmap)
+- Repository Insights Dashboard
+- Fake Changelog
+- Pro Tier
+- Expanded tab navigation
 
 ## URLs
 - Live: https://git-blame-life.netlify.app
