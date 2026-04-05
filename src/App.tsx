@@ -4,7 +4,7 @@
  * achievements, easter eggs, sounds, confetti, and share cards.
  */
 import { useState, useCallback } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import CRTOverlay from './components/CRTOverlay';
 import Header from './components/Header';
 import BlameInput from './components/BlameInput';
@@ -329,10 +329,8 @@ export default function App() {
         {/* Section navigation tabs */}
         <TabNav activeTab={activeTab} onTabChange={setActiveTab} />
 
-        {/* Tab content with exit/enter animations */}
-        <AnimatePresence mode="wait">
-          {renderTabContent()}
-        </AnimatePresence>
+        {/* Tab content — no AnimatePresence to prevent black screen on phase transitions */}
+        {renderTabContent()}
 
         {/* Achievements panel */}
         <AchievementPanel achievements={achievements} />
