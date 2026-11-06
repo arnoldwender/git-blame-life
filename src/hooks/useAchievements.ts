@@ -2,7 +2,7 @@
  * Achievement system — tracks blame milestones and unlocks.
  * Persists to localStorage so achievements survive reloads.
  */
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { playAchievementSound } from '../utils/sound';
 import { fireAchievementConfetti } from '../utils/confetti';
 
@@ -103,21 +103,20 @@ function loadCounts(): Counts {
 
 export function useAchievements() {
   const [achievements, setAchievements] = useState<Achievement[]>(loadAchievements);
+  const loadedAchievements = useRef(achievements);
   const [counts, setCounts] = useState<Counts>(loadCounts);
   const [newlyUnlocked, setNewlyUnlocked] = useState<Achievement | null>(null);
 
-  /* Persist whenever achievements change */
+  /* Persist only after an unlock: writing the untouched initial state on page load is
+     storage without user action (§ 25 Abs. 1 TDDDG). Counts are saved in recordBlame. */
   useEffect(() => {
+    if (achievements === loadedAchievements.current) return;
     const map: Record<string, number> = {};
     achievements.forEach((a) => {
       if (a.unlocked && a.unlockedAt) map[a.id] = a.unlockedAt;
     });
     localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
   }, [achievements]);
-
-  useEffect(() => {
-    localStorage.setItem(COUNT_KEY, JSON.stringify(counts));
-  }, [counts]);
 
   const unlock = useCallback(
     (id: string) => {
