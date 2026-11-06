@@ -105,7 +105,9 @@ export default function App() {
     let i = 0;
     const logIv = setInterval(() => {
       if (i < terminalLogs.length) {
-        setLogs((prev) => [...prev, terminalLogs[i]]);
+        /* Capture before i++: React may run the updater later, when i already points past the end */
+        const nextLog = terminalLogs[i];
+        setLogs((prev) => [...prev, nextLog]);
         playTypeSound();
         i++;
       } else {
@@ -129,7 +131,8 @@ export default function App() {
         let li = 0;
         const lineIv = setInterval(() => {
           if (li < lines.length) {
-            setBlameLines((prev) => [...prev, lines[li]]);
+            const nextLine = lines[li];
+            setBlameLines((prev) => [...prev, nextLine]);
             playCommitSound();
             li++;
           } else {
@@ -347,6 +350,11 @@ export default function App() {
           <div className="text-red-500/[0.13] mt-1">
             HTTP 418 — YOUR EX IS ALSO A TEAPOT
           </div>
+          {/* Legal pages are static files in public/ so they stay reachable without JavaScript */}
+          <nav aria-label="Legal" className="mt-3 flex justify-center gap-6 text-[0.7rem] text-blame-primary">
+            <a href="/impressum/" className="underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-1 focus-visible:outline-blame-primary">IMPRESSUM</a>
+            <a href="/datenschutz/" className="underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-1 focus-visible:outline-blame-primary">DATENSCHUTZ</a>
+          </nav>
         </footer>
       </div>
     </div>
